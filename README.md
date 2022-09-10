@@ -3,7 +3,7 @@
 To get started with **Base Repository**, use Composer to add the package to your project's dependencies:
 
 ```bash
-    composer require su-1294/base-repository-laravel
+    composer require rebbull/repo
 ```
 
 ## Configuration
@@ -20,7 +20,7 @@ If you don't use auto-discovery, add the ServiceProvider to the providers array 
 'providers' => [
     // Other service providers...
 
-    Rebbull\Repo\ContractsServiceProvider::class,
+    Rebbull\Repo\Providers\RepositoryServiceProvider::class,
 ],
 ```
 

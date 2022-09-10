@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Rebbull\Repo\Contracts\RepositoryInterface;
 
-class EloquentRepository implements RepositoryInterface {
+class AbstractRepository implements RepositoryInterface {
     protected $model;
 
     public function __construct(Model $model)

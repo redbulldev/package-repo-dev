@@ -11,9 +11,7 @@
             "Rebbull\\Repo\\": "src/"
         }
     },
-    "require": {
-        "php": "^8.0"
-    },
+    "require": {},
     "minimum-stability": "dev",
     "extra": {
         "laravel": {

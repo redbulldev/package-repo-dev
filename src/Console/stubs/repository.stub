@@ -2,10 +2,10 @@
 
 namespace DummyNamespace;
 
-use Rebbull\Repo\Eloquents\EloquentRepository;
+use Rebbull\Repo\Eloquents\AbstractRepository;
 use App\Repositories\Contracts\DummyClassInterface;
 
-class DummyClass extends EloquentRepository implements DummyClassInterface
+class DummyClass extends AbstractRepository implements DummyClassInterface
 {
     //
 }

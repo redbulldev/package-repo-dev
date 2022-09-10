@@ -1,0 +1,10 @@
+<?php
+
+namespace DummyNamespace;
+
+use Rebbull\Repo\Contracts\RepositoryInterface;
+
+interface DummyClass extends RepositoryInterface
+{
+    //
+}

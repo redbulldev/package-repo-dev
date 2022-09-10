@@ -1,0 +1,22 @@
+{
+    "name": "rebbull/repo",
+    "authors": [
+        {
+            "name": "redbulldev",
+            "email": "nv.hung.red@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Rebbull\\Repo\\": "src/"
+        }
+    },
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Rebbull\\Repo\\Providers\\RepositoryServiceProvider"
+            ]
+        }
+    }
+}

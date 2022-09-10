@@ -1,0 +1,11 @@
+<?php
+
+namespace DummyNamespace;
+
+use Rebbull\Repo\Eloquents\EloquentRepository;
+use App\Repositories\Contracts\DummyClassInterface;
+
+class DummyClass extends EloquentRepository implements DummyClassInterface
+{
+    //
+}

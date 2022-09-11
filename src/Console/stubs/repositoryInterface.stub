@@ -2,7 +2,7 @@
 
 namespace DummyNamespace;
 
-use Rebbull\Repo\Contracts\RepositoryInterface;
+use Rebbull\Repository\Contracts\RepositoryInterface;
 
 interface DummyClass extends RepositoryInterface
 {

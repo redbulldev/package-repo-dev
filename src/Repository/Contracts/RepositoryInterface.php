@@ -1,6 +1,6 @@
 <?php
 
-namespace Rebbull\Repo\Contracts;
+namespace Rebbull\Repository\Contracts;
 
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;

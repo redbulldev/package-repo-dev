@@ -1,10 +1,10 @@
 <?php
 
-namespace Rebbull\Repo\Providers;
+namespace Rebbull\Repository\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Rebbull\Repo\Console\RepositoryMakeCommand;
-use Rebbull\Repo\Console\RepositoryInterfaceMakeCommand;
+use Rebbull\Repository\Console\RepositoryMakeCommand;
+use Rebbull\Repository\Console\RepositoryInterfaceMakeCommand;
 
 class RepositoryServiceProvider extends ServiceProvider
 {

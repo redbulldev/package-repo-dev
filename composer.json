@@ -1,5 +1,5 @@
 {
-    "name": "rebbull/repo",
+    "name": "rebbull/repository",
     "authors": [
         {
             "name": "redbulldev",
@@ -8,7 +8,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Rebbull\\Repo\\": "src/"
+            "Rebbull\\Repository\\": "src/"
         }
     },
     "require": {},
@@ -16,7 +16,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Rebbull\\Repo\\Providers\\RepositoryServiceProvider"
+                "Rebbull\\Repository\\Providers\\RepositoryServiceProvider"
             ]
         }
     }

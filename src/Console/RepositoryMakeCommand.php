@@ -1,6 +1,6 @@
 <?php
 
-namespace Rebbull\Repo\Console;
+namespace Rebbull\Repository\Console;
 
 use Illuminate\Support\Str;
 use Illuminate\Console\GeneratorCommand;

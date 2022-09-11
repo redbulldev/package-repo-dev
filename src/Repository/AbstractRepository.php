@@ -1,10 +1,10 @@
 <?php
 
-namespace Rebbull\Repo\Eloquents;
+namespace Rebbull\Repository;
 
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
-use Rebbull\Repo\Contracts\RepositoryInterface;
+use Rebbull\Repository\Contracts\RepositoryInterface;
 
 class AbstractRepository implements RepositoryInterface {
     protected $model;

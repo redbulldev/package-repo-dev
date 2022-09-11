@@ -8,19 +8,12 @@ To get started with **Base Repository**, use Composer to add the package to your
 
 ## Configuration
 
-### Laravel 5.5+
-
-Laravel uses Package Auto-Discovery, so doesn't require you to manually add the ServiceProvider.
-
-### Laravel < 5.5:
-
-If you don't use auto-discovery, add the ServiceProvider to the providers array in config/app.php
-
+### Laravel 
 ```php
 'providers' => [
     // Other service providers...
 
-    Rebbull\Repo\Providers\RepositoryServiceProvider::class,
+    Rebbull\Repository\Providers\RepositoryServiceProvider::class,
 ],
 ```
 
@@ -41,7 +34,7 @@ UserRepository extends EloquentRepository so you can use method in EloquentRepos
 namespace App\Repositories;
 
 use App\Models\User;
-use Rebbull\Repo\Contracts\EloquentRepository;
+use Rebbull\Repository\Contracts\EloquentRepository;
 use App\Repositories\Contracts\UserRepositoryInterface;
 
 class UserRepository extends EloquentRepository implements UserRepositoryInterface
@@ -70,7 +63,6 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use App\Repositories\UserRepository;
 use App\Repositories\Contracts\UserRepositoryInterface;
-
 
 class AppServiceProvider extends ServiceProvider
 {

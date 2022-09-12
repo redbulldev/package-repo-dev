@@ -1,10 +1,10 @@
 <?php
 
-namespace Rebbull\Repository\Providers;
+namespace Rebbull;
 
 use Illuminate\Support\ServiceProvider;
-use Rebbull\Repository\Console\RepositoryMakeCommand;
-use Rebbull\Repository\Console\RepositoryInterfaceMakeCommand;
+use Rebbull\Console\RepositoryMakeCommand;
+use Rebbull\Console\RepositoryInterfaceMakeCommand;
 
 class RepositoryServiceProvider extends ServiceProvider
 {
@@ -12,7 +12,7 @@ class RepositoryServiceProvider extends ServiceProvider
         RepositoryMakeCommand::class,
         RepositoryInterfaceMakeCommand::class
     ];
-    
+
     /**
      * Register services.
      *
@@ -30,7 +30,7 @@ class RepositoryServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadRoutesFrom(__DIR__ . '/../../routes/web.php');
+        $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
     }
 }
 

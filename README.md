@@ -13,7 +13,7 @@ To get started with **Base Repository**, use Composer to add the package to your
 'providers' => [
     // Other service providers...
 
-    Rebbull\Repository\Providers\RepositoryServiceProvider::class,
+    Rebbull\RepositoryServiceProvider::class,
 ],
 ```
 
@@ -26,7 +26,7 @@ Next, you are ready to use repository. If you want create repository with Model 
 php artisan make:repository UserRepository -i
 ```
 When run this commnand, Packeage automatic generate two file in forder Repository: UserRepository and UserRepositoryInterface. 
-UserRepository extends EloquentRepository so you can use method in EloquentRepository
+UserRepository extends AbstractRepository so you can use method in AbstractRepository
 
 ```php
 <?php
@@ -34,10 +34,10 @@ UserRepository extends EloquentRepository so you can use method in EloquentRepos
 namespace App\Repositories;
 
 use App\Models\User;
-use Rebbull\Repository\Contracts\EloquentRepository;
+use Rebbull\Repository\Contracts\AbstractRepository;
 use App\Repositories\Contracts\UserRepositoryInterface;
 
-class UserRepository extends EloquentRepository implements UserRepositoryInterface
+class UserRepository extends AbstractRepository implements UserRepositoryInterface
 {
     protected $model;
 

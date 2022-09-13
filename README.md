@@ -54,6 +54,34 @@ class UserRepository extends AbstractRepository implements UserRepositoryInterfa
     }
 }
 ```
+
+Next, create controller, run commnand line 
+
+```bash
+
+php artisan make:con UserController -c
+```
+When run this commnand, Packeage automatic generate file in forder Http/Controller/Api: UserController. 
+UserController extends baseController.
+```php
+<?php
+
+namespace App\Http\Controllers\Api;
+
+use App\Repositories\Contracts\UserRepositoryInterface;
+use Rebbull\Http\Controllers\Api\BaseController;
+
+class UserController extends BaseController
+{
+    protected $tag;
+
+    public function __construct(userRepositoryInterface $tag)
+    {
+        parent::__construct($tag);
+    }
+}
+```
+
 Register in AppServiceProvider
 ```php
 <?php
@@ -91,7 +119,7 @@ class AppServiceProvider extends ServiceProvider
 
 #### Retrieving User Details
 
-In controller, You want find user by id use repository
+In the controller you can completely override the methods you want
 
 ```php
 <?php
@@ -100,8 +128,9 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Repositories\Contracts\UserRepositoryInterface;
+use Rebbull\Http\Controllers\Api\BaseController;
 
-class UserController extends Controller
+class UserController extends BaseController
 {
     /**
      * @var UserRepositoryInterface
@@ -115,11 +144,7 @@ class UserController extends Controller
 
     public function show($id) 
     {
-        $user = $this->user->show($id);
-
-        return response()->json([
-            'data' => $user
-        ], 200);
+        //
     }
 }
 ```
@@ -134,3 +159,13 @@ public function show(int $id): ?Model;
 public function update(int $id ,array $attributes): bool;
 
 public function destroy(int $id): bool;
+
+public function allTrashed(): Collection;
+
+public function findTrashedById(int $id): ?Model;
+
+public function findOnlyTrashedById(int $id): ?Model;
+
+public function restoreById(int $id): bool;
+
+public function permanentlyDeleteById(int $id): bool;

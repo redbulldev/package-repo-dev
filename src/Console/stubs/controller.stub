@@ -1,0 +1,10 @@
+<?php
+
+namespace DummyNamespace;
+
+use Rebbull\Http\Controllers\Api\BaseController;
+
+class DummyClass extends BaseController
+{
+    //
+}

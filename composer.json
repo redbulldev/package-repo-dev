@@ -11,7 +11,9 @@
             "Rebbull\\": "src/"
         }
     },
-    "require": {},
+    "require": {
+        "intervention/image": "^3.0@alpha"
+    },
     "minimum-stability": "dev",
     "extra": {
         "laravel": {

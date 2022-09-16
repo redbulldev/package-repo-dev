@@ -75,7 +75,7 @@ class UserController extends BaseController
 {
     protected $tag;
 
-    public function __construct(userRepositoryInterface $tag)
+    public function __construct(UserRepositoryInterface $tag)
     {
         parent::__construct($tag);
     }

@@ -36,6 +36,10 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'rebbull-demo');
         $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
         $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'rebbull-demo');
+
+        $this->publishes([
+            __DIR__.'/../public' => public_path('/'),
+        ], 'public');
     }
 }
 
